@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title text-center">Rock Paper Scissors</h1>
+        <div class="flex">
+            <div class="item rock m-2" onclick="playGame('rock')">
+                <img src="./assets/rock.png" alt="">
+            </div>
+            <div class="flex two">
+                <div class="item paper m-2" onclick="playGame('paper')"><img src="./assets/paper.jfif" alt=""></div>
+                <div class="item scissors m-2" onclick="playGame('scissors')"><img src="./assets/scissors.png" alt=""></div>
+            </div>
+        </div>
+        <div id="result-popup" class="popup">
+
+            <!-- Modal content -->
+            <div class="popup-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p class="result">Some text in the Modal..</p>
+            </div>
+          
+          </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
