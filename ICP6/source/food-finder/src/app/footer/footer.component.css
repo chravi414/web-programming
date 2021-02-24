@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer {
     background: #6d5353;
     width: 100%;
@@ -14,3 +15,21 @@ footer {
     font-weight: 700;
     text-align: center;
 }
+=======
+footer {
+    background: #6d5353;
+    width: 100%;
+    padding: 15px 20px;
+    bottom: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.footer {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+}
+>>>>>>> af241130964a5a87b233549f85447650ae757d02

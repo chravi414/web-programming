@@ -13,8 +13,36 @@ export class RestaurantSearchComponent implements OnInit {
   modalRef: BsModalRef;
   public restaurantsList = [];
   public address: any;
+<<<<<<< HEAD
+  public currentLocation: any;
+  constructor(private modalService: BsModalService, private http: HttpClient) { }
+
+  ngOnInit() {
+    this.getPosition().then(res => {
+      this.currentLocation = res;
+      this.getNearByRestaurants();
+    });
+  }
+
+  getNearByRestaurants() {
+    this.restaurantsList = [];
+    this.http.get(`https://api.foursquare.com/v2/venues/search?ll=${this.currentLocation.lat},${this.currentLocation.lng}&categoryId=4d4b7105d754a06374d81259&client_id=${environment.FOURSQUARE_CLIENT_ID}&client_secret=${environment.FOURSQUARE_CLIENT_SECRET}&v=20210224`).subscribe(response => {
+      const venues = response['response']['venues'].slice(0, 4);
+      console.log(venues)
+      venues.map(venue => {
+        const obj = {
+          name: venue.name,
+          id:venue.id,
+          address: venue['location']['formattedAddress']
+        }
+        console.log(obj)
+        this.restaurantsList.push(obj);
+      })
+    })
+=======
   constructor(private modalService: BsModalService, private http:HttpClient) {}
   ngOnInit() {
+>>>>>>> af241130964a5a87b233549f85447650ae757d02
   }
 
   getRestaurants() {
@@ -35,6 +63,20 @@ export class RestaurantSearchComponent implements OnInit {
     })
   }
 
+<<<<<<< HEAD
+   getPosition() {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resp => {
+          resolve({lng: resp.coords.longitude, lat: resp.coords.latitude});
+        },
+        err => {
+          reject(err);
+        });
+    });
+
+  }
+=======
+>>>>>>> af241130964a5a87b233549f85447650ae757d02
 
   openDetails(restaurant, template: TemplateRef<any>) {
     this.http.get(`https://api.foursquare.com/v2/venues/${restaurant.id}&client_id=${environment.FOURSQUARE_CLIENT_ID}&client_secret=${environment.FOURSQUARE_CLIENT_SECRET}&v=20210224`).subscribe(data => {
