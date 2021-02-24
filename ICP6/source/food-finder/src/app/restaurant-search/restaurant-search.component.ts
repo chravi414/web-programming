@@ -70,7 +70,6 @@ export class RestaurantSearchComponent implements OnInit {
 
   }
 
-
   openDetails(restaurant, template: TemplateRef<any>) {
     this.http.get(`https://api.foursquare.com/v2/venues/${restaurant.id}&client_id=${environment.FOURSQUARE_CLIENT_ID}&client_secret=${environment.FOURSQUARE_CLIENT_SECRET}&v=20210224`).subscribe(data => {
       console.log(data)
