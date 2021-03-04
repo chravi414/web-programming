@@ -1,0 +1,19 @@
+<div class="button-row">
+    <button color="primary" mat-raised-button (click)="openAddNewBookPopup()"><mat-icon>add</mat-icon></button>
+</div>
+<div class="main-container">
+    <mat-card class="example-card" *ngFor="let book of books;let i=index">
+        <mat-card-header>
+            <img mat-card-avatar [src]="book.coverphoto" alt={{book.title}} />
+            <mat-card-title>{{book.title}}</mat-card-title>
+            <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content (click)="openDetailsPopup(book)">
+            <p>{{book.description}}</p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-raised-button color="accent" (click)="openEditBookPopup(book)">Edit</button>
+            <button mat-raised-button color="warn" (click)="openDeleteBookPopup(book._id)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
