@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vijaya.androidhardware.StorageActivity"
+    android:background="@drawable/background"
+    android:paddingBottom="16dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="16dp">
+
+    <EditText
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please enter the data to save."
+        android:textColorHint="@android:color/white"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnSaveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtData"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:onClick="save"
+        android:text="Save Data" />
+
+    <Button
+        android:id="@+id/btnLoadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSaveData"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:onClick="load"
+        android:text="Load Data" />
+
+    <TextView
+        android:id="@+id/lblData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLoadData"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="70dp"/>
+</RelativeLayout>

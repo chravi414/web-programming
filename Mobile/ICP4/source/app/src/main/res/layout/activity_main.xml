@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/landing">
+
+    <Button
+        android:id="@+id/main_btn_map"
+        android:width="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="onLocationClick"
+        android:text="locate me"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/main_btn_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="140dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:text="take photo"
+        android:onClick="onPhotoClick"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:padding="16dp"/>
+    <Button
+        android:id="@+id/main_btn_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:width="140dp"
+        android:padding="16dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:text="record"
+        android:onClick="onAudioClick"/>
+
+    <Button
+        android:id="@+id/main_btn_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="140dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/black"
+        android:onClick="onStorageClick"
+        android:padding="16dp"
+        android:shadowRadius="10"
+        android:text="storage"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+</LinearLayout>
